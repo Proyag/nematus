@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 '''
 Translates a source file using a translation model.
 '''
@@ -101,7 +102,7 @@ class Translation(object):
         if self.hyp_graph:
             renderer = HypGraphRenderer(self.hyp_graph)
             renderer.wordify(word_idict_trg)
-            renderer.save_png(filename, detailed, highlight_best)
+            renderer.save(filename, detailed, highlight_best)
         else:
             pass #TODO: Warning if no search graph has been constructed during decoding?
 
